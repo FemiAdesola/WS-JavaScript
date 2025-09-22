@@ -10,5 +10,8 @@ function humanToDogYears(age) {
 }
 
 // Testing the function:
-const age = -1;
+console.log("Solution for Exercise 1: Human to Dog Years Converter");
+const age = 1;
 console.log("When the age of human is " + age + ", a dog age is " + humanToDogYears(age) + " years."); // Output: 42 years
+
+console.log("############################# ############################# #############################"); 
