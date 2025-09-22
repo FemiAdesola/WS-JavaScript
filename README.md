@@ -58,7 +58,7 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 <summary>👉Click to expand and see the details</summary>
 
 ### Check fixed Code
-[Debugging_html](Debugging.html)
+[Debugging_html](/WS1-JavaScript/Debugging.html)
 
 ### What Was Fixed?
 + Semicolons
