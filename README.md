@@ -71,3 +71,92 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 + Array loop out of range
   + Changed loop condition from i <= 3 to i < arr.length to avoid undefined.
 </details>
+
+
+
+# Workshop 2: Hands-On DOM and BOM Exercises
+
+> This project contains a series of JavaScript exercises designed to practice **DOM (Document Object Model)** and **BOM (Browser Object Model)** manipulation in a web page. Each exercise demonstrates different aspects of interacting with the browser and dynamically updating the page content.
+<details>
+<summary>👉Click to expand and see the details</summary>
+
+## Files
+
+* `WS2-JavaScript-DOM-BOM.html` – The main HTML file that includes the JavaScript.
+* `WS2-JavaScript-DOM-BOM.js` – Contains all five exercises in sequence.
+
+## How to Run
+
+1. Download the files to your local machine.
+2. Open `WS2-JavaScript-DOM-BOM.html` in any modern web browser.
+3. Follow the on-screen prompts (`confirm` dialogs) to proceed through each exercise.
+4. The exercises run in order, and some require user interaction to continue.
+
+
+</details>
+
+---
+
+## Exercises Overview
+> Each exercise wait for the user to click “OK” before moving to the next one
+
+<details>
+<summary>👉Click to expand and see the details</summary>
+
+### **Exercise 1: Document Write**
+
+* Writes a message to the page:
+
+  ```
+  Hello, this is my first DOM manipulation exercise.
+  ```
+* Demonstrates basic DOM writing using `document.write()`.
+
+### **Exercise 2: Repeating Text**
+
+* Prompts the user to continue with a `confirm` dialog.
+* Writes a line of text to the page 30 times using a loop:
+
+  ```
+  This is line 1
+  This is line 2
+  ...
+  This is line 30
+  ```
+* Shows how to dynamically create and append elements to the document.
+
+### **Exercise 3: Conditional Browser Redirection**
+
+* Prompts the user to continue.
+* Checks the user's browser using `navigator.appName`.
+* If the browser is Mozilla (`Netscape`), opens a media page in a new tab:
+
+  * `https://www.mozilla.org/en-GB/`
+* Otherwise, displays a message indicating the browser is not Mozilla.
+
+### **Exercise 4: Confirmation Dialog**
+
+* Prompts the user to continue.
+* Shows a confirm dialog asking: `"Are you a student?"`.
+* Displays the user's response (`true` or `false`) on the page.
+* Logs the result in the console.
+
+### **Exercise 5: Random Image Display**
+
+* Prompts the user to continue.
+* Selects a random image from a predefined array:
+
+  * `https://placehold.co/600x400/000000/FFFFFF`
+  * `https://placehold.co/600x400/FF0000/000000`
+  * `https://placehold.co/600x400/008000/FFFFFF`
+* Displays the selected image on the page.
+
+---
+
+</details>
+
+## Notes
+
+* Some exercises rely on user confirmation (`confirm`) to proceed.
+* `document.write()` is used for demonstration purposes but is **deprecated** in modern web development. Consider using DOM manipulation methods (`appendChild`, `textContent`) for production code.
+---
