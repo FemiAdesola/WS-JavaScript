@@ -1,8 +1,10 @@
-# First workshop
+# Workshop 1
 
 ## Human to Dog Years Convertion
 > This is a simple JavaScript function that can converts a person's age into "dog years."  
 For this example, **A human year = 7 dog years**.
+<details>
+<summary>👉Click to expand and see the details</summary>
 <details>
 <summary>👉Click to expand and see the details</summary>
 
@@ -72,7 +74,7 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
   + Changed loop condition from i <= 3 to i < arr.length to avoid undefined.
 </details>
 
-
+</details>
 
 # Workshop 2: Hands-On DOM and BOM Exercises
 
@@ -93,7 +95,7 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 4. The exercises run in order, and some require user interaction to continue.
 
 
-</details>
+
 
 ---
 
@@ -153,10 +155,106 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 
 ---
 
-</details>
+
 
 ## Notes
 
 * Some exercises rely on user confirmation (`confirm`) to proceed.
 * `document.write()` is used for demonstration purposes but is **deprecated** in modern web development. Consider using DOM manipulation methods (`appendChild`, `textContent`) for production code.
 ---
+</details>
+</details>
+
+# Workshop 3: JavaScript Events
+> This demonstrates **basic JavaScript event handling** in HTML, using both inline event attributes and modern event listeners. Each HTML file shows different ways to interact with events like `onclick`, `onmouseover`, `onfocus`, and more.
+
+<details>
+<summary>👉Click to expand and see the details</summary>
+
+## Files and Explanations
+
+### 1. **Named Functions for Events**
+**File:** ` HTML_Events_Functions.html`  
+- Uses a **named function** `showBrowserInfo()` to display browser details using the **`navigator` object**.  
+- Demonstrates `navigator.appCodeName` and `navigator.appName`.  
+- Triggered when clicking a button.  
+
+---
+
+### 2. **Browser Compatibility**
+**File:** `HTML_Browser_Compatibility.html`  
+- Shows how to attach an event handler using **`addEventListener`** (modern browsers) and **`attachEvent`** (older IE).  
+- Button click displays `"Compatible!"` message, updating on repeated clicks.  
+- Demonstrates **cross-browser compatibility checks**.  
+
+---
+
+### 3. **Dynamic Listeners**
+**File:** `HTML_Dynamic_Event_Listeners.html`  
+- Adds a click listener dynamically to an `<h1>` element.  
+- Alerts `"Hello World!"` when clicked.  
+- Includes a **Remove Listener** button that removes the event listener using `removeEventListener`.  
+
+---
+
+### 4. **HTML Event Attributes**
+**File:** `HTML_Events_Attributes.html`  
+- Demonstrates inline event attributes:  
+  - `onsubmit` on a form (prevents reload).  
+  - `onmouseover` / `onmouseout` on a button.  
+  - `onclick` and `onfocus` on inputs.  
+- Shows simple event handling without JavaScript functions.  
+
+---
+
+### 5. **Basic HTML Events**
+**File:** `HTML_Events_Common.html`  
+- Demonstrates:  
+  - `window.onload` event.  
+  - `onclick` on a button.  
+  - `onchange` on an input field.  
+  - `ondblclick` on a paragraph.  
+  - `onmouseover` / `onmouseout` for hover effects.  
+- Shows **difference between inline handlers and JavaScript functions**.  
+
+---
+
+### 6. **Multiple Listeners**
+**File:** `HTML_Multiple_Dynamic_Event_Listeners.html`  
+- Shows the difference between:  
+  - Assigning multiple `onclick` functions (only the last one runs).  
+  - Using `addEventListener` to attach multiple event handlers (all run).  
+- Example prints `"Third!"` and `"Fourth!"` messages to the page.  
+
+---
+
+### 7. **Common Events List**
+**File:** `HTML_Using_Common_JS_Events.html`  
+- Demonstrates several commonly used events:  
+  - `onload` (page load alert).  
+  - `onchange` on a dropdown.  
+  - `onmouseover` / `onmouseout` on an image (changes source).  
+  - `onkeydown` on an input (alerts on every key press).  
+- Good overview of **frequently used DOM events**.  
+
+---
+
+## How to Use
+1. Save the `.html` files.  
+2. Open them in your browser or with **Live Server (VS Code)**.  
+3. Interact with elements (click, hover, type, etc.) to trigger events.  
+
+---
+
+## Key Concepts Covered
+- Inline event attributes (`onclick`, `onfocus`, `onmouseover`, etc.)  
+- `window.onload` to run code after page loads  
+- Named vs anonymous functions in event handling  
+- Adding/removing listeners with `addEventListener` and `removeEventListener`  
+- Browser compatibility with `attachEvent` (legacy IE)  
+- Common events: `onclick`, `ondblclick`, `onchange`, `onmouseover`, `onmouseout`, `onkeydown`  
+
+---
+
+
+</details>

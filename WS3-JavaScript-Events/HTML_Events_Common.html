@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <div id="content">
+        <p>Page loaded! (onload event)</p>
+        <p>This is the original paragraph.</p>
+  </div>
+    <input type="text" id="myInput" onchange="alert('Input changed!')"> <!-- onchange example -->
+
+    <!-- HTML attribute event handlers -->
+    <button onclick="alert('Button clicked!')">Click Me</button> <!-- onclick example -->
+    <p onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Hover over me!</p> <!-- onmouseover/onmouseout -->
+    
+    <button onclick="alert('You clicked the button!')">Click Me</button>
+    <p ondblclick="alert('You double-clicked the paragraph!')">
+        Double-click this text!
+    </p>
+
+    <script>
+        // onload runs when page loads
+        window.onload = function() { document.body.innerHTML += "<p>JS onload triggered!</p>"; };
+
+        window.onload = function() {
+        // Find the div where we’ll add new content
+        let container = document.getElementById("content");
+        // Append a new paragraph
+        container.innerHTML += "<p>This paragraph was added with window.onload!</p>";
+    };
+    </script>
+</body>
+</html>

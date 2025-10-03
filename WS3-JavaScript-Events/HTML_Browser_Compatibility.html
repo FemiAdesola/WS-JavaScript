@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Compatibility</title>
+</head>
+<body>
+    <h1>Browser Compatibility</h1>
+    <button id="compatBtn">Compatible Click</button>
+
+    <!-- Output area -->
+    <div id="output"></div>
+
+    <script>
+        let btn = document.getElementById('compatBtn');
+        let output = document.getElementById('output');
+
+        function compatClick() {
+            // If message doesn't exist, create it
+            if (!document.getElementById("compatMsg")) {
+                let p = document.createElement("p");
+                p.id = "compatMsg"; // give it an id
+                p.textContent = "Compatible!";
+                output.appendChild(p);
+            } else {
+                // If it already exists, just update the text
+                document.getElementById("compatMsg").textContent = `Compatible! (the same result "Compatible!")`;
+            }
+        }
+        // Check support
+        if (window.addEventListener) {
+            btn.addEventListener('click', compatClick); // Modern
+        } else if (window.attachEvent) {
+            btn.attachEvent('onclick', compatClick); // IE <9
+        }
+    </script>
+    
+</body>
+</html>

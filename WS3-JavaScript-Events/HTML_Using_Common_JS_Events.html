@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Events List</title>
+</head>
+<body onload="alert('Page loaded!')"> <!-- onload on body -->
+    <h1>Common Events</h1>
+
+    <!-- Dropdown with onchange -->
+    <select onchange="alert('Selection changed!')"> <!-- onchange on select -->
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+    </select>
+    <br><br>
+    <!-- Image with onmouseover and onmouseout -->
+    <img src="https://placehold.co/600x400/000000/FFFFFF" 
+        onmouseover="this.src=`https://placehold.co/600x400/FF0000/000000`"
+        onmouseout="this.src='https://placehold.co/600x400/000000/FFFFFF'" 
+        alt="Hover Image"
+        width="200" > <!-- onmouseover/out on img -->
+    <br><br>
+
+    <input type="text" placeholder="Type something here"  onkeydown="alert('Key down!')"> <!-- onkeydown on input -->
+</body>
+</html>

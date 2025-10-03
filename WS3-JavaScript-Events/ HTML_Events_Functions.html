@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Functions for Events</title>
+</head>
+<body>
+    <h1>Named Function</h1>
+    <p>What is the name(s) of your browser?</p>
+    <p>Click the button to see your browser details:</p>
+    <button onclick="showBrowserInfo()">Show Info</button>
+
+    <div id="info" style="margin-top:15px; font-weight:bold;">
+
+    </div> <!-- Output area -->
+    <script>
+        function showBrowserInfo(){
+            let output = document.getElementById("info");
+
+            // Get browser info using navigator (BOM)
+            output.innerHTML += "<br>Code name is " + navigator.appCodeName;
+            output.innerHTML += "<br>App name is " + navigator.appName;
+        }
+    </script>
+</body>
+</html>
+
+<!-- The navigator object to display browser details. -->

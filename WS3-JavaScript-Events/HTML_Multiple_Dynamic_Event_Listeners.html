@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Listeners</title>
+</head>
+<body>
+    <h1>Multiple Listeners</h1>
+    <button id="a">Click for Multiple</button>
+
+      <!-- This is the place where messages will appear -->
+  <div id="output"></div>
+
+    <script>
+       let element = document.getElementById('a');
+       let output = document.getElementById('output');
+
+        // Helper function to print to page
+        function printMessage(msg) {
+        let p = document.createElement("p");
+        p.textContent = msg;
+        output.appendChild(p);
+        }
+
+
+        // This overwrites previous onclick
+        element.onclick = function() { alert('First!'); };
+        element.onclick = function() { alert('Second!'); }; // Only second runs
+        // These both work (multiple)
+        element.addEventListener('click', function() { alert('Third!'); });
+        element.addEventListener('click', function() { alert('Fourth!'); });
+
+        // These both work (multiple listeners)
+        element.addEventListener('click', function() { printMessage('Third!'); });
+        element.addEventListener('click', function() { printMessage('Fourth!'); });
+    </script>
+
+    
+</body>
+</html>
