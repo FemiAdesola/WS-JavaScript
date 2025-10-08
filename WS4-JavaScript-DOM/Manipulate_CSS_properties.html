@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Styles & Animations</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      button {
+        margin: 5px 0;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background-color: #55585b;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .highlight {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 6s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="toggleStyleBtn">Toggle Red Background</button>
+    <p id="targetParagraph">This paragraph's style will change.</p>
+
+    <button id="fadeInBtn">Fade In Heading</button>
+    <h1 id="fadeHeading">I will fade in!</h1>
+
+    <script>
+      // Element references
+      const toggleStyleBtn = document.getElementById("toggleStyleBtn");
+      const paragraph = document.getElementById("targetParagraph");
+      const fadeInBtn = document.getElementById("fadeInBtn");
+      const fadeHeading = document.getElementById("fadeHeading");
+
+      // Toggle paragraph background
+      toggleStyleBtn.addEventListener("click", () => {
+        paragraph.classList.toggle("highlight");
+      });
+
+      // Fade-in animation for heading
+      fadeInBtn.addEventListener("click", () => {
+        fadeHeading.classList.add("fade-in");
+      });
+    </script>
+  </body>
+</html>

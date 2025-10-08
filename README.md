@@ -75,6 +75,8 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 </details>
 
 </details>
+<br>
+<br>
 
 # Workshop 2: Hands-On DOM and BOM Exercises
 
@@ -164,6 +166,9 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 ---
 </details>
 </details>
+
+<br>
+<br>
 
 # Workshop 3: JavaScript Events
 > This demonstrates **basic JavaScript event handling** in HTML, using both inline event attributes and modern event listeners. Each HTML file shows different ways to interact with events like `onclick`, `onmouseover`, `onfocus`, and more.
@@ -255,6 +260,100 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 - Common events: `onclick`, `ondblclick`, `onchange`, `onmouseover`, `onmouseout`, `onkeydown`  
 
 ---
+</details>
+<br>
+<br>
+
+# Workshop 4: JavaScript DOM Scripting
+> This demonstrates a series of simple HTML and JavaScript examples that demonstrate **core DOM manipulation techniques** and the creation of a basic **Single Page Application (SPA)** using pure JavaScript — without any external libraries or frameworks.
+
+<details>
+<summary>👉Click to expand and see the details</summary>
+
+## Files and Explanations
 
 
+### 1. **DOM Introduction (`DOM_API.html`)**
+Demonstrates how to:
+- Access HTML elements using `getElementById` and `getElementsByClassName`.
+- View content in the browser console.
+
+**Key Concepts:**
+```js
+document.getElementById("main-title");
+document.getElementsByClassName("intro-text");
+```
+
+---
+### 2. **Finding Elements (`HTML_Finding_Elements.html`)**
+Shows various methods to locate elements in the DOM:
+- `getElementById`
+- `getElementsByClassName`
+- `getElementsByTagName`
+- `querySelector`
+- `querySelectorAll`
+
+**Example:**
+```js
+const allListItems = document.querySelectorAll("ul li");
+```
+
+---
+### 3. **Changing Content & Attributes (`Changing_Content_and_Attributes.html`)**
+Demonstrates how to dynamically modify:
+- Text and HTML content (`textContent`, `innerHTML`)
+- Attributes (`setAttribute` for `src`, `href`, etc.)
+
+**Example:**
+```js
+imageElement.setAttribute("src", "https://picsum.photos/id/237/150/150");
+linkElement.textContent = "Visit W3Schools";
+```
+
+---
+### 4. **Dynamic Element Creation (`Creating_and_Adding_Elements.html`)**
+Shows how to create new elements on the fly:
+- Create new paragraphs or list items using `createElement()`
+- Append them to the document using `appendChild()`
+
+**Example:**
+```js
+const paragraph = document.createElement("p");
+paragraph.textContent = "This is a new paragraph!";
+document.body.appendChild(paragraph);
+```
+
+---
+### 5. **Dynamic Styles & Animations (`Manipulate_CSS_properties.html`)**
+Demonstrates how to:
+- Toggle CSS classes dynamically with JavaScript.
+- Apply simple CSS animations using `@keyframes`.
+
+**Example:**
+```js
+paragraph.classList.toggle("highlight");
+fadeHeading.classList.add("fade-in");
+```
+
+---
+### 6. **Single Page Application (SPA) (`Web_Pages_and_SPA.html`)**
+A complete working example of a **Single Page Application** built with vanilla JavaScript.
+
+**Features:**
+- One HTML file acting as an entire app.
+- Navigation between “Home”, “About”, and “Contact” sections **without reloading**.
+- Uses DOM manipulation to dynamically replace content.
+
+**Core Logic:**
+```js
+const pages = {
+  home: `<h2>Home</h2><p>Welcome to our SPA!</p>`,
+  about: `<h2>About</h2><p>This app uses DOM manipulation to change content dynamically.</p>`,
+  contact: `<h2>Contact</h2><p>Reach us at info@example.com</p>`
+};
+
+function navigate(page) {
+  content.innerHTML = pages[page];
+}
+```
 </details>

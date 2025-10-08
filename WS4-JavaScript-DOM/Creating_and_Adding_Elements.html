@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Element Creation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      button {
+        margin: 5px 0;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background-color: #55585b;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      ul {
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+
+      p {
+        color: #007bff;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Dynamic Element Creation Demo</h1>
+
+    <div>
+      <button id="addParagraphBtn">Add New Paragraph</button>
+      <button id="addListItemBtn">Add New List Item</button>
+    </div>
+
+    <ul id="myList">
+      <li>Existing List Item 1</li>
+    </ul>
+
+    <script>
+      // --- Dynamic Paragraph Creation ---
+      let paragraphCount = 0;
+      const addParagraphBtn = document.getElementById("addParagraphBtn");
+
+      addParagraphBtn.addEventListener("click", () => {
+        paragraphCount++;
+
+        // For creating a new paragraph element
+        const paragraph = document.createElement("p");
+        paragraph.textContent = `Dynamically created paragraph #${paragraphCount}`;
+
+        document.body.appendChild(paragraph);
+      });
+
+      // --- Dynamic List Item Creation ---
+      let listItemCount = 1;
+      const addListItemBtn = document.getElementById("addListItemBtn");
+      const myList = document.getElementById("myList");
+
+      addListItemBtn.addEventListener("click", () => {
+        listItemCount++;
+
+        // For creating a new list item element
+        const listItem = document.createElement("li");
+        listItem.textContent = `New List Item ${listItemCount}`;
+
+        myList.appendChild(listItem);
+      });
+    </script>
+  </body>
+</html>

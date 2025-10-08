@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Single Page Application (SPA)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      nav {
+        background-color: #007bff;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      nav button {
+        background: white;
+        border: none;
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      nav button:hover {
+        background-color: #e0e0e0;
+      }
+
+      #content {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        margin-top: 30px;
+        text-align: center;
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Single Page Application</h1>
+      <p>Navigate between sections without reloading the page by click on anypage</p>
+     
+    </header>
+
+    <nav>
+      <button id="homeBtn">Home</button>
+      <button id="aboutBtn">About</button>
+      <button id="contactBtn">Contact</button>
+    </nav>
+
+    <div id="content">
+      <!-- Default content (Home) will be loaded here -->
+    </div>
+
+    <footer>
+      <p>© 2025 SPA</p>
+    </footer>
+
+    <script>
+      const content = document.getElementById("content");
+
+      // Define page sections
+      const pages = {
+        home: `
+          <h2>Home</h2>
+          <p>Welcome to our Single Page Application! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laudantium earum consequuntur quibusdam hic. Cupiditate nulla perspiciatis totam sequi dolor. Dolor nulla quos ipsam sequi consectetur nobis consequuntur ratione facilis.</p>
+        `,
+        about: `
+          <h2>About</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laudantium earum consequuntur quibusdam hic. Cupiditate nulla perspiciatis totam sequi dolor. Dolor nulla quos ipsam sequi consectetur nobis consequuntur ratione facilis.</p>
+          <button onclick="navigate('home')">⬅ Back to Home</button>
+        `,
+        contact: `
+          <h2>Contact</h2>
+          <p> Send us a message at <strong>info@example.com</strong>.</p>
+          <button onclick="navigate('home')">⬅ Back to Home</button>
+        `
+      };
+
+      // Navigation function
+      function navigate(page) {
+        content.innerHTML = pages[page] || "<h2>Page not found</h2>";
+      }
+
+      // Add event listeners
+      document.getElementById("homeBtn").addEventListener("click", () => navigate("home"));
+      document.getElementById("aboutBtn").addEventListener("click", () => navigate("about"));
+      document.getElementById("contactBtn").addEventListener("click", () => navigate("contact"));
+
+      // Load default page
+      navigate("home");
+    </script>
+  </body>
+</html>
