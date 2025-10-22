@@ -9,8 +9,12 @@
 |-------------------------|-----------------------------------------------|
 | ![Front page](./img/FormPage.png)           |   ![erro Front page](./img/ErrorMessage.png)      |
 
-
-
+---
+## Tech Stack
+- HTML5
+- CSS3 (custom properties, responsive layout)
+- Vanilla JavaScript (ES6)
+- localStorage persistence
 ---
 
 ## Features

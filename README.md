@@ -368,6 +368,12 @@ function navigate(page) {
 | ![Front page](./WS5-smart-forms/img/FormPage.png)           |   ![erro Front page](./WS5-smart-forms/img/ErrorMessage.png)      |
 
 ---
+## Tech Stack
+- HTML5
+- CSS3 (custom properties, responsive layout)
+- Vanilla JavaScript (ES6)
+- localStorage persistence
+---
 
 ## Features
 
