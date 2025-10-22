@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      Document Metadata
+      -----------------
+      Defines document type, encoding, responsive behavior, and references external stylesheet.
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Forms Demo</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Page Header -->
+      <h1>Sign up</h1>
+
+      <!-- 
+        Error Summary Container
+        ------------------------
+        Displays a list of validation errors collectively at the top of the form.
+      -->
+      <div
+        id="error-summary"
+        class="visually-hidden"
+        role="alert"
+        aria-live="polite"
+      ></div>
+
+      <!-- 
+        Signup Form
+        ------------
+        Includes personal details, optional company registration, and honeypot for spam prevention.
+      -->
+      <form id="signupForm" novalidate>
+        <fieldset>
+          <legend>Your details</legend>
+
+          <!-- Full Name -->
+          <label for="name">Full name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            minlength="2"
+            autocomplete="name"
+            aria-describedby="nameHelp"
+          />
+          <small id="nameHelp" class="help">
+            Enter your first and last name.
+          </small>
+          <p class="error" id="nameError"></p>
+
+          <!-- Email Address -->
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+          />
+           <small id="emailHelp" class="help">
+            Enter your full email address.
+          </small>
+          <p class="error" id="emailError"></p>
+
+          <!-- Password -->
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            minlength="8"
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"
+            autocomplete="new-password"
+            aria-describedby="pwdHelp"
+          />
+          <small id="pwdHelp" class="help">
+            At least 8 characters with upper, lower, and a number.
+          </small>
+          <p class="error" id="passwordError"></p>
+
+          <!-- Optional Phone Number -->
+          <label for="phone">Phone (optional)</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            pattern="[0-9 +\-]{7,15}"
+            placeholder="+358 40 123 4567"
+            autocomplete="tel"
+          />
+          <p class="error" id="phoneError"></p>
+
+          <!-- Company Registration Option -->
+          <label>
+            <input id="companyToggle" type="checkbox" />
+            Register as a company
+          </label>
+
+          <!-- Conditional Company Field -->
+          <div id="companyFields" hidden>
+            <label for="company">Company name</label>
+            <input id="company" name="company" type="text" minlength="2" />
+            <p class="error" id="companyError"></p>
+          </div>
+        </fieldset>
+
+        <!-- 
+          Honeypot Field
+          ---------------
+          Hidden field used to prevent automated bot submissions.
+        -->
+        <input
+          type="text"
+          id="hp"
+          name="hp"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          class="hidden-field"
+        />
+
+        <!-- 
+          Form Actions
+          -------------
+          Primary (Submit) and Secondary (Clear) buttons.
+        -->
+        <div class="form-actions">
+          <button type="submit" class="btn">Create account</button>
+          <button type="button" id="clearBtn" class="btn-secondary">
+            Clear
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- External script file -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
