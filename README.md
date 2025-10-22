@@ -96,9 +96,6 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 3. Follow the on-screen prompts (`confirm` dialogs) to proceed through each exercise.
 4. The exercises run in order, and some require user interaction to continue.
 
-
-
-
 ---
 
 ## Exercises Overview
@@ -156,8 +153,6 @@ console.log("When the age of human is " + age + ", a dog age is " + humanToDogYe
 * Displays the selected image on the page.
 
 ---
-
-
 
 ## Notes
 
@@ -297,7 +292,6 @@ Shows various methods to locate elements in the DOM:
 ```js
 const allListItems = document.querySelectorAll("ul li");
 ```
-
 ---
 ### 3. **Changing Content & Attributes (`Changing_Content_and_Attributes.html`)**
 Demonstrates how to dynamically modify:
@@ -364,14 +358,14 @@ function navigate(page) {
 # WWorkshop 5: Smart Forms in JavaScript
 > A lightweight, accessible, and fully-featured signup form demo built with **HTML, CSS, and JavaScript**. This task demonstrates form validation, live error feedback, local storage persistence, conditional company registration, and honeypot spam protection.
 
+<code style="color : darkyellow"><strong>View the website link [here](https://femi-smart-form.netlify.app/)</strong></code>
+
 <details>
 <summary>👉Click to expand and see the details</summary>
 
 | Front page without error                    | Error handling                               |
 |-------------------------|-----------------------------------------------|
-| ![Front page](./ws5-smart-forms/img/FormPage.png)           |   ![erro Front page](./ws5-smart-forms/img/ErrorMessage.png)      |
-
-
+| ![Front page](./WS5-smart-forms/img/FormPage.png)           |   ![erro Front page](./WS5-smart-forms/img/ErrorMessage.png)      |
 
 ---
 

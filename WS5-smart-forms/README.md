@@ -1,6 +1,9 @@
 # Smart Forms Demo
 
-A lightweight, accessible, and fully-featured signup form demo built with **HTML, CSS, and JavaScript**. This project demonstrates form validation, live error feedback, local storage persistence, conditional company registration, and honeypot spam protection.
+> A lightweight, accessible, and fully-featured signup form demo built with **HTML, CSS, and JavaScript**. This project demonstrates form validation, live error feedback, local storage persistence, conditional company registration, and honeypot spam protection.
+
+<code style="color : darkyellow"><strong>View the website link [here](https://femi-smart-form.netlify.app/)</strong></code>
+
 
 | Front page without error                    | Error handling                               |
 |-------------------------|-----------------------------------------------|
